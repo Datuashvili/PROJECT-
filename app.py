@@ -24,7 +24,7 @@ data_IBM['5. adjusted close'] = pd.to_numeric(data_IBM['5. adjusted close'], err
 data_IBM1= pd.DataFrame(data_IBM['4. close'])
 # datafame with 4 columns open price, close price and adjusted close price and set DATE as column 
 data_IBM2 = pd.DataFrame([data_IBM['4. close'], data_IBM['1. open'], data_IBM['5. adjusted close']]).T
-data_IBM2 = data_IBM.reset_index()
+data_IBM2 = data_IBM2.reset_index()
 data_IBM2 = data_IBM2.rename(columns = ({'4. close' : 'Closing_price_IBM', '1. open': 'opening_price_IBM', 
                                         '5. adjusted close': 'adjusted_close_price', 'index': 'Date'  }))
 # set up chart 
